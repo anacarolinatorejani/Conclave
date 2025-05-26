@@ -75,12 +75,12 @@ namespace Conclave
                 return;
             }
 
-            if (Buscar(nome) > -1)
+            if (Funcoes.Buscar(nome, dados) > -1)
             {
-                MessageBox.Show($"[nome] já cadastrado");
+                MessageBox.Show($"{nome} já cadastrado");
                 return;
             }
-            dados[Length(dados)] = new string[]{nome, "0"};
+            dados[Funcoes.Length(dados)] = new string[]{nome, "0"};
 
             Atualizar();
             txtNome.Text = "";

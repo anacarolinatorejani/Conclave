@@ -33,6 +33,7 @@
             this.txtNome = new System.Windows.Forms.TextBox();
             this.btAdicionar = new System.Windows.Forms.Button();
             this.btRemover = new System.Windows.Forms.Button();
+            this.Nome = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCardeais)).BeginInit();
             this.SuspendLayout();
             // 
@@ -41,6 +42,8 @@
             this.dgvCardeais.AllowUserToAddRows = false;
             this.dgvCardeais.AllowUserToDeleteRows = false;
             this.dgvCardeais.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvCardeais.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Nome});
             this.dgvCardeais.Location = new System.Drawing.Point(12, 12);
             this.dgvCardeais.Name = "dgvCardeais";
             this.dgvCardeais.ReadOnly = true;
@@ -86,6 +89,12 @@
             this.btRemover.Text = "&Excluir";
             this.btRemover.UseVisualStyleBackColor = true;
             // 
+            // Nome
+            // 
+            this.Nome.HeaderText = "Nome";
+            this.Nome.Name = "Nome";
+            this.Nome.ReadOnly = true;
+            // 
             // FrmGerenciar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -112,5 +121,6 @@
         private System.Windows.Forms.TextBox txtNome;
         private System.Windows.Forms.Button btAdicionar;
         private System.Windows.Forms.Button btRemover;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Nome;
     }
 }

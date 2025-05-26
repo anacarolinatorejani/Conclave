@@ -25,16 +25,22 @@ namespace Conclave
             this.dados = dados;
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void btGerenciar_Click(object sender, EventArgs e)
         {
             FrmGerenciar f = new FrmGerenciar(this, dados);
             f.Show();
-            this.Hide();
+            //this.Hide();
         }
 
-        private void button3_Click(object sender, EventArgs e)
+        private void btResultado_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void btVotar_Click(object sender, EventArgs e)
+        {
+            FrmVotar f = new FrmVotar(this, dados);
+            f.ShowDialog();
         }
     }
 }

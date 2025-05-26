@@ -42,7 +42,7 @@
             this.btGerenciar.TabIndex = 0;
             this.btGerenciar.Text = "&Gerenciar cardeais";
             this.btGerenciar.UseVisualStyleBackColor = true;
-            this.btGerenciar.Click += new System.EventHandler(this.button1_Click);
+            this.btGerenciar.Click += new System.EventHandler(this.btGerenciar_Click);
             // 
             // btVotar
             // 
@@ -53,6 +53,7 @@
             this.btVotar.TabIndex = 1;
             this.btVotar.Text = "&Votar";
             this.btVotar.UseVisualStyleBackColor = true;
+            this.btVotar.Click += new System.EventHandler(this.btVotar_Click);
             // 
             // btResultado
             // 
@@ -63,7 +64,7 @@
             this.btResultado.TabIndex = 2;
             this.btResultado.Text = "&Resultado";
             this.btResultado.UseVisualStyleBackColor = true;
-            this.btResultado.Click += new System.EventHandler(this.button3_Click);
+            this.btResultado.Click += new System.EventHandler(this.btResultado_Click);
             // 
             // Conclave
             // 

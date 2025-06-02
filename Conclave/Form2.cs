@@ -104,7 +104,6 @@ namespace Conclave
                 int indice = Funcoes.Buscar(nome, dados);
                 if (indice != -1)
                 {
-                    // Remanejar elementos para frente
                     for (int i = indice; i < Funcoes.Length(dados) - 1; i++)
                     {
                         dados[i] = dados[i + 1];

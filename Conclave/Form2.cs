@@ -85,5 +85,36 @@ namespace Conclave
             Atualizar();
             txtNome.Text = "";
         }
+
+        private void btRemover_Click(object sender, EventArgs e)
+        {
+            if (dgvCardeais.SelectedRows.Count == 0)
+            {
+                MessageBox.Show("Selecione um cardeal para remover");
+                return;
+            }
+
+            int rowIndex = dgvCardeais.SelectedRows[0].Index;
+            string nome = dgvCardeais.Rows[rowIndex].Cells[0].Value.ToString();
+
+            DialogResult confirm = MessageBox.Show($"Deseja remover o cardeal {nome}?", "Confirmar Remoção", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+            if (confirm == DialogResult.Yes)
+            {
+                int indice = Funcoes.Buscar(nome, dados);
+                if (indice != -1)
+                {
+                    // Remanejar elementos para frente
+                    for (int i = indice; i < Funcoes.Length(dados) - 1; i++)
+                    {
+                        dados[i] = dados[i + 1];
+                    }
+
+                    dados[Funcoes.Length(dados) - 1] = null; // Limpa último
+                    Atualizar();
+                }
+            }
+        }
     }
 }
+

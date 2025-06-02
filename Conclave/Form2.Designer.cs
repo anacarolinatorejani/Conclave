@@ -29,11 +29,11 @@
         private void InitializeComponent()
         {
             this.dgvCardeais = new System.Windows.Forms.DataGridView();
+            this.Nome = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.lblNome = new System.Windows.Forms.Label();
             this.txtNome = new System.Windows.Forms.TextBox();
             this.btAdicionar = new System.Windows.Forms.Button();
             this.btRemover = new System.Windows.Forms.Button();
-            this.Nome = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCardeais)).BeginInit();
             this.SuspendLayout();
             // 
@@ -49,6 +49,12 @@
             this.dgvCardeais.ReadOnly = true;
             this.dgvCardeais.Size = new System.Drawing.Size(344, 426);
             this.dgvCardeais.TabIndex = 0;
+            // 
+            // Nome
+            // 
+            this.Nome.HeaderText = "Nome";
+            this.Nome.Name = "Nome";
+            this.Nome.ReadOnly = true;
             // 
             // lblNome
             // 
@@ -88,12 +94,7 @@
             this.btRemover.TabIndex = 4;
             this.btRemover.Text = "&Excluir";
             this.btRemover.UseVisualStyleBackColor = true;
-            // 
-            // Nome
-            // 
-            this.Nome.HeaderText = "Nome";
-            this.Nome.Name = "Nome";
-            this.Nome.ReadOnly = true;
+            this.btRemover.Click += new System.EventHandler(this.btRemover_Click);
             // 
             // FrmGerenciar
             // 

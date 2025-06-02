@@ -109,7 +109,7 @@ namespace Conclave
                         dados[i] = dados[i + 1];
                     }
 
-                    dados[Funcoes.Length(dados) - 1] = null; // Limpa último
+                    dados[Funcoes.Length(dados) - 1] = null; 
                     Atualizar();
                 }
             }
